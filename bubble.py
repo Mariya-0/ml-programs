@@ -1,31 +1,18 @@
-print("Selection Sort")
-def selectionSort(array, size):
-   
-    for i in range(size):
-        min_index = i
-
-        for j in range(i + 1, size):
-            # select the minimum element in every iteration
-            if array[j] < array[min_index]:
-                min_index = j
-         # swapping the elements to sort the array
-        (array[i], array[min_index]) = (array[min_index], array[i])
-
-arr = [-2, 45, 0, 11, -9,88,-97,-202,747]
-size = len(arr)
-selectionSort(arr, size)
-print('The array after sorting(selection sort) in Ascending Order by selection sort is:')
-print(arr)
 print("bubble sort")
-def bubblesort(array,size):
+
+def bubblesort(array, size):
     for i in range(size):
         swapped = False
-    for j in range(size-i-1):
-        if array[j]>array[j+1]:
-            (array[j],array[j+1])=(array[j+1],array[j] )
-            swapped =True
+        for j in range(size - i - 1):
+            if array[j] > array[j + 1]:
+                array[j], array[j + 1] = array[j + 1], array[j]
+                swapped = True
         if not swapped:
-            break  
+            break  # If no elements were swapped, the array is already sorted
+
+arr = [-2, 45, 0, 11, -9, 88, -97, -202, 747]
+size = len(arr)
 bubblesort(arr, size)
-print('the array after sorting(bubble sort) in Ascending order is:')
+
+print('The array after sorting (bubble sort) in Ascending order is:')
 print(arr)
