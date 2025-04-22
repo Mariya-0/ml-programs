@@ -1,3 +1,4 @@
+print("Selection Sort")
 def selectionSort(array, size):
    
     for i in range(size):
@@ -13,5 +14,19 @@ def selectionSort(array, size):
 arr = [-2, 45, 0, 11, -9,88,-97,-202,747]
 size = len(arr)
 selectionSort(arr, size)
-print('The array after sorting in Ascending Order by selection sort is:')
+print('The array after sorting(selection sort) in Ascending Order by selection sort is:')
 print(arr)
+print("bubble sort")
+def bubblesort(array,size):
+    for i in range(size):
+        swapped = False
+    for j in range(size-i-1):
+        if array[j]>array[j+1]:
+            (array[j],array[j+1])=(array[j+1],array[j] )
+            swapped =True
+        if not swapped:
+            break  
+bubblesort(arr, size)
+print('the array after sorting(bubble sort) in Ascending order is:')
+print(arr)
+        
